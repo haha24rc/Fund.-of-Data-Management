@@ -1,0 +1,150 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="videoGameData" type="gameType">
+
+        <xs:key name = "companyKey">
+                <xs:selector xpath = "Company"/>
+                <xs:field xpath = "companyID"/>
+        </xs:key>
+
+        <xs:key name="genreKey">
+            <xs:selector xpath = "genre"/>
+            <xs:field xpath = "genreID"/>
+        </xs:key>
+
+        <xs:key name="videoGameKey">
+            <xs:selector xpath = "VideoGame"/>
+            <xs:field xpath = "videoGameID"/>
+        </xs:key>
+        
+        <xs:key name="charKey">
+            <xs:selector xpath = "character"/>
+            <xs:field xpath = "charID"/>
+        </xs:key>
+
+        <xs:key name="sysReqKey">
+            <xs:selector xpath = "systemRequirement"/>
+            <xs:field xpath = "sysReqID"/>
+        </xs:key>
+
+        <xs:keyref name="genreFKey" refer="genreKey">
+            <xs:selector xpath = "VideoGame"/>
+            <xs:field xpath = "genreID"/>
+        </xs:keyref>
+
+        <xs:keyref name="companyFKey" refer="companyKey">
+            <xs:selector xpath = "VideoGame"/>
+            <xs:field xpath = "companyID"/>
+        </xs:keyref>
+
+        <xs:keyref name="characterGame_characterFkey" refer="charKey">
+            <xs:selector xpath = "characterGame"/>
+            <xs:field xpath = "charID"/>
+        </xs:keyref>
+
+        <xs:keyref name="characterGame_videoGameFkey" refer="videoGameKey">
+            <xs:selector xpath = "characterGame"/>
+            <xs:field xpath = "videoGameID"/>
+        </xs:keyref>
+
+        <xs:keyref name="sysReqGame_sysReqFkey" refer="sysReqKey">
+            <xs:selector xpath = "sysReqGame"/>
+            <xs:field xpath = "sysReqID"/>
+        </xs:keyref>
+
+        <xs:keyref name="sysReqGame_videoGameFkey" refer="videoGameKey">
+            <xs:selector xpath = "sysReqGame"/>
+            <xs:field xpath = "videoGameID"/>
+        </xs:keyref>
+
+    </xs:element>
+
+    <xs:complexType name="gameType">
+        <xs:sequence>
+            <xs:element ref="Company" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="genre" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="VideoGame" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="character" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="systemRequirement" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="characterGame" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="sysReqGame" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="Company">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="companyID " type="xs:integer"/>
+                <xs:element name="companyName" type="xs:string"/>
+                <xs:element name="gameCount" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="genre">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="genreID" type="xs:integer"/>
+                <xs:element name="type" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="VideoGame">
+       <xs:complexType>
+		    <xs:sequence>
+			    <xs:element name="videoGameID" type="xs:integer"/>
+				<xs:element name="gameName" type="xs:string"/>
+				<xs:element name="difficulty" type="xs:integer"/>
+				<xs:element name="DLCsCount" type="xs:integer"/>
+				<xs:element name="releaseDate" type="xs:string"/>
+				<xs:element name="price" type="xs:integer"/>
+				<xs:element name="playedTime" type="xs:string"/>
+				<xs:element name="rating" type="xs:integer"/>
+                <xs:element name="platform" type="xs:string"/>
+                <xs:element name="genreID" type="xs:integer"/>
+                <xs:element name="companyID" type="xs:integer"/>
+	        </xs:sequence>
+		</xs:complexType>
+    </xs:element>
+
+    <xs:element name="character">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="charID" type="xs:integer"/>
+                <xs:element name="charName" type="xs:string"/>
+                <xs:element name="bestLine" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="systemRequirement">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sysReqID" type="xs:integer"/>
+                <xs:element name="OS" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="characterGame">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="characterGameID" type="xs:integer"/>
+                <xs:element name="videoGameID" type="xs:integer"/>
+                <xs:element name="charID" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="sysReqGame">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sysReqGameID" type="xs:integer"/>
+                <xs:element name="videoGameID" type="xs:integer"/>
+                <xs:element name="sysReqID" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

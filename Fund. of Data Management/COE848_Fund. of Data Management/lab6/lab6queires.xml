@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:template match="/">
+        <html> 
+            <body>
+                <h2>Video games played on PC</h2>
+                <table border="1">
+                    <tr bgcolor="#9acd32">
+                        <th style="text-align:left">video game</th>
+                    </tr>
+                    <xsl:for-each select="videoGameData/VideoGame[platform = 'PC']">
+                        <tr>
+                            <td><xsl:value-of select="gameName"/></td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+
+                <h2>The video game with ARPG type</h2>
+                <table border="1">
+                    <tr bgcolor="#9acd32">
+                        <th>video game</th>
+                    </tr>
+                    <xsl:for-each select="videoGameData/VideoGame">
+                        <tr>
+                        <xsl:variable name="tempGameName" select="gameName"/>
+                        <xsl:variable name="tempGenreID" select="genreID"/>
+                        <xsl:variable name="tempCharGame" select="//videoGameData/genre[type = 'ARPG' and genreID = $tempGenreID] " />
+                         
+                        <xsl:if test="$tempCharGame">
+                            <td><xsl:value-of select="gameName"/></td>
+                        </xsl:if>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+
+
+                <h2>All the characters in the the database</h2>
+                <table border="1">
+                    <tr bgcolor="#9acd32">
+                        <th style="text-align:left">Character</th>
+                        <th style="text-align:left">Best line</th>
+                    </tr>
+                    <xsl:for-each select="videoGameData/character">
+                        <tr>
+                            <td><xsl:value-of select="charName"/></td>
+                            <td><xsl:value-of select="bestLine"/></td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+
+                <h2>Release date of the all the video games</h2>
+                <table border="1">
+                    <tr bgcolor="#9acd32">
+                        <th style="text-align:left">Video game</th>
+                        <th style="text-align:left">Release date</th>
+                    </tr>
+                    <xsl:for-each select="videoGameData/VideoGame">
+                        <tr>
+                            <td><xsl:value-of select="gameName"/></td>
+                            <td><xsl:value-of select="releaseDate"/></td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+
+                <h2>Most expensive game in the database</h2>
+                <table border="1">
+                    <tr bgcolor="#9acd32">
+                        <th style="text-align:left">Video game</th>
+                        <th style="text-align:left">Price</th>
+                    </tr>
+                    <xsl:for-each select="videoGameData/VideoGame">
+                        <xsl:sort select="price"/>
+                        <tr>
+                            <td><xsl:value-of select="gameName"/></td>
+                            <td><xsl:value-of select="price"/></td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+            </body>
+        </html>
+    </xsl:template>
+</xsl:stylesheet>

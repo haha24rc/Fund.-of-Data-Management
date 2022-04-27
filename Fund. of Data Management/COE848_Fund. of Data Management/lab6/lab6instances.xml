@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<videoGameData>
+
+    <Company>
+		<companyID>1</companyID>
+	    <companyName>Yostar</companyName>
+        <gameCount>4</gameCount>
+	</Company>
+
+	<Company>
+		<companyID>2</companyID>
+	    <companyName>Cygames</companyName>
+        <gameCount>13</gameCount>
+	</Company>
+
+    <Company>
+		<companyID>3</companyID>
+	    <companyName>SquareEnix</companyName>
+        <gameCount>138</gameCount>
+	</Company>
+
+    <Company>
+		<companyID>4</companyID>
+	    <companyName>BANDAI NAMCO Entertainment</companyName>
+        <gameCount>78</gameCount>
+	</Company>
+
+	<Company>
+		<companyID>5</companyID>
+	    <companyName>SEGA</companyName>
+        <gameCount>179</gameCount>
+	</Company>
+
+
+    <genre>
+        <genreID>1</genreID>
+	    <type>Tower defense</type>
+	</genre>
+
+    <genre>
+        <genreID>2</genreID>
+	    <type>ARPG</type>
+	</genre>
+
+    <genre>
+        <genreID>3</genreID>
+	    <type>Turn-based strategy</type>
+	</genre>
+
+    <genre>
+        <genreID>4</genreID>
+	    <type>RPG</type>
+	</genre>
+
+    <genre>
+        <genreID>5</genreID>
+	    <type>Multiplayer online battle arena</type>
+	</genre>
+
+
+    <VideoGame>
+        <videoGameID>1</videoGameID>
+	    <gameName>Dark Soul 3</gameName>
+        <difficulty>10</difficulty>
+        <DLCsCount>2</DLCsCount>
+        <releaseDate>2016/04/12</releaseDate>
+        <price>66</price>
+        <playedTime>300</playedTime>
+        <rating>98</rating>
+        <platform>PC</platform>
+        <genreID>2</genreID>
+        <companyID>4</companyID>
+	</VideoGame>
+
+    <VideoGame>
+        <videoGameID>2</videoGameID>
+	    <gameName>Arknights</gameName>
+        <difficulty>6</difficulty>
+        <DLCsCount>0</DLCsCount>
+        <releaseDate>2019/05/01</releaseDate>
+        <price>0</price>
+        <playedTime>50</playedTime>
+        <rating>87</rating>
+        <platform>mobile</platform>
+        <genreID>1</genreID>
+        <companyID>1</companyID>
+	</VideoGame>
+
+    <VideoGame>
+        <videoGameID>3</videoGameID>
+	    <gameName>Sekiro</gameName>
+        <difficulty>10</difficulty>
+        <DLCsCount>0</DLCsCount>
+        <releaseDate>2019/03/22</releaseDate>
+        <price>80</price>
+        <playedTime>180</playedTime>
+        <rating>95</rating>
+        <platform>PC</platform>
+        <genreID>4</genreID>
+        <companyID>4</companyID>
+	</VideoGame>
+
+    <VideoGame>
+        <videoGameID>4</videoGameID>
+	    <gameName>NieR: Automata</gameName>
+        <difficulty>7</difficulty>
+        <DLCsCount>1</DLCsCount>
+        <releaseDate>2017/03/17</releaseDate>
+        <price>54</price>
+        <playedTime>70</playedTime>
+        <rating>96</rating>
+        <platform>PS4</platform>
+        <genreID>2</genreID>
+        <companyID>3</companyID>
+	</VideoGame>
+
+    <VideoGame>
+        <videoGameID>5</videoGameID>
+	    <gameName>Total War: Three Kingdom</gameName>
+        <difficulty>9</difficulty>
+        <DLCsCount>11</DLCsCount>
+        <releaseDate>2019/05/11</releaseDate>
+        <price>80</price>
+        <playedTime>33</playedTime>
+        <rating>95</rating>
+        <platform>PC</platform>
+        <genreID>3</genreID>
+        <companyID>5</companyID>
+	</VideoGame>
+
+
+    <character>
+        <charID>1</charID>
+        <charName>Siegward</charName>
+        <bestLine>Yhorm, old friend. I, Siegward of the Knights of Catarina, 
+        have come to fulfill my promise. Let the sun shine upon this Lord of Cinder!</bestLine>
+    </character>
+
+    <character>
+        <charID>2</charID>
+        <charName>Patches</charName>
+        <bestLine>Every age, it seems, is tainted by the greed of men. 
+        Rubbish, to one such as I, devoid of all worldly wants! 
+        Hmmm, I dunno, maybe it's just the way we are. I'll stick you in my prayers. 
+        A fine dark soul, to you..</bestLine>
+    </character>
+
+    <character>
+        <charID>3</charID>
+        <charName>Kroos</charName>
+        <bestLine>Kokodayo</bestLine>
+    </character>
+
+    <character>
+        <charID>4</charID>
+        <charName>Isshin Ashina</charName>
+        <bestLine>Hesitation is defeat</bestLine>
+    </character>
+
+    <character>
+        <charID>5</charID>
+        <charName>Pod 153</charName>
+        <bestLine>Everything that lives is designed to end. 
+        They are perpetually trapped in a never-ending spiral of life and death. 
+        However, life is all about the struggle within this cycle. That is what `we` believe.</bestLine>
+    </character>
+
+    <systemRequirement>
+        <sysReqID>1</sysReqID>
+        <OS>AMD Ryzen 5 2600</OS>
+    </systemRequirement>
+
+    <systemRequirement>
+        <sysReqID>2</sysReqID>
+        <OS>Intel Core i3 2100</OS>
+    </systemRequirement>
+
+    <systemRequirement>
+        <sysReqID>3</sysReqID>
+        <OS>AMD FX 6300</OS>
+    </systemRequirement>
+
+    <systemRequirement>
+        <sysReqID>4</sysReqID>
+        <OS>Intel Core i5 6600</OS>
+    </systemRequirement>
+
+    <systemRequirement>
+        <sysReqID>5</sysReqID>
+        <OS>Intel i7 3770</OS>
+    </systemRequirement>
+
+    <characterGame>
+        <characterGameID>1</characterGameID>
+        <videoGameID>1</videoGameID>
+        <charID>1</charID>
+    </characterGame>
+
+    <characterGame>
+        <characterGameID>2</characterGameID>
+        <videoGameID>3</videoGameID>
+        <charID>4</charID>
+    </characterGame>
+
+    <characterGame>
+        <characterGameID>3</characterGameID>
+        <videoGameID>1</videoGameID>
+        <charID>2</charID>
+    </characterGame>
+
+    <characterGame>
+        <characterGameID>4</characterGameID>
+        <videoGameID>2</videoGameID>
+        <charID>3</charID>
+    </characterGame>
+
+    <characterGame>
+        <characterGameID>5</characterGameID>
+        <videoGameID>4</videoGameID>
+        <charID>5</charID>
+    </characterGame>
+
+    <sysReqGame>
+        <sysReqGameID>1</sysReqGameID>
+        <videoGameID>1</videoGameID>
+        <sysReqID>2</sysReqID>
+    </sysReqGame>
+
+    <sysReqGame>
+        <sysReqGameID>2</sysReqGameID>
+        <videoGameID>1</videoGameID>
+        <sysReqID>3</sysReqID>
+    </sysReqGame>
+    
+    <sysReqGame>
+        <sysReqGameID>3</sysReqGameID>
+        <videoGameID>3</videoGameID>
+        <sysReqID>2</sysReqID>
+    </sysReqGame>
+
+    <sysReqGame>
+        <sysReqGameID>4</sysReqGameID>
+        <videoGameID>4</videoGameID>
+        <sysReqID>2</sysReqID>
+    </sysReqGame>
+    
+    <sysReqGame>
+        <sysReqGameID>5</sysReqGameID>
+        <videoGameID>5</videoGameID>
+        <sysReqID>4</sysReqID>
+    </sysReqGame>
+
+</videoGameData>
